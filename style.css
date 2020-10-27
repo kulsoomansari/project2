@@ -1,0 +1,129 @@
+/*.box{
+width: 100px;
+height: 100px;
+background-color: grey;
+margin-top: 30px;
+animation-name: boxanim;
+animation-duration: 1s;
+animation-iteration-count: infinite;
+}
+@keyframes boxanim{
+    from{
+        background-color: palevioletred;
+        
+        transform: rotate(0)
+    }
+    to{
+        background-color: blue;
+    
+        transform: rotate(45deg);
+    }
+}
+.ball{
+    width: 100px;
+    height: 100px;
+    background-color: coral;
+    margin: 0 auto;
+    margin-top: 50px;
+    border-radius: 50px;
+    animation: bounce 2s infinite;
+}
+@keyframes bounce{
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
+   40% {transform: translateY(-30px);} 
+   60% {transform: translateY(-15px);} 
+}*/
+body{
+    background-color: black;
+}
+.line1{
+    width: 500px;
+    height: 10px;
+    position: absolute;
+    top: 20%;
+    left: 50px;
+    border-top: 4px dashed white;
+}
+.line2{
+    width: 500px;
+    height: 10px;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    border-top: 4px dashed white;
+    animation: road infinite 5s linear;
+}
+.road{
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    top: 80%;
+    left: 0%;
+    border-top: 8px dashed white; 
+    animation: road infinite 5s linear; 
+}
+@keyframes road{
+ 0%{
+     left: 0px;
+ }
+ 100%{
+     left: -1200px;
+ }
+}
+.pacman{
+    width: 80px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #f2d648;
+    position: absolute;
+    top: 60%;
+    left: 44%;
+    animation: bounce 1s infinite;
+}
+@keyframes bounce{
+    0%, 100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(30px);
+    }
+}
+.eye{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+}
+.mouth{
+    width: 0;
+	height: 0;
+	border-top: 25px solid transparent;
+	border-right: 50px solid black;
+    border-bottom: 25px solid transparent;
+    position: absolute;
+    top: 35%;
+    left: 44%;
+
+}
+.eat{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 86%;
+    animation: food 0.7s infinite;
+}
+@keyframes food {
+    0% {
+      transform: translateX(30);
+    }
+    100% {
+      transform: translateX(-20px);
+    
+    }
+  }
